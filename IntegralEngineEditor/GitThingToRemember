@@ -1,0 +1,4 @@
+git add "(File.extension)"
+git commit -m "(Message)"
+git branch -M (branch)
+git push -u origin (branch)

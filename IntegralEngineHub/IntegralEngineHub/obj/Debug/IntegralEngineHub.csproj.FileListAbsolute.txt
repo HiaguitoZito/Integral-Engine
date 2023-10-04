@@ -1,0 +1,10 @@
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\bin\Debug\IntegralEngineHub.exe.config
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\bin\Debug\IntegralEngineHub.exe
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\bin\Debug\IntegralEngineHub.pdb
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\obj\Debug\IntegralEngineHub.csproj.AssemblyReference.cache
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\obj\Debug\IntegralEngineHub.Form1.resources
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\obj\Debug\IntegralEngineHub.Properties.Resources.resources
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\obj\Debug\IntegralEngineHub.csproj.GenerateResource.cache
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\obj\Debug\IntegralEngineHub.csproj.CoreCompileInputs.cache
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\obj\Debug\IntegralEngineHub.exe
+C:\Users\Hiago Fernando\Desktop\Coisas Importantes\IntegralEngine\IntegralEngineHub\IntegralEngineHub\obj\Debug\IntegralEngineHub.pdb
