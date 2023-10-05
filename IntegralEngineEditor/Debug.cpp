@@ -16,7 +16,7 @@ int main(){
     Foo f = Foo();
     Foo f2 = Foo();
     f.x(10);
-    f2.x(20);
+    f2.x(30);
     f = f * f2;
     std::cout << f.x() << std::endl;
     return 0;

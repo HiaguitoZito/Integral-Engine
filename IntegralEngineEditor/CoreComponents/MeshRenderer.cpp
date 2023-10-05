@@ -65,10 +65,10 @@ public:
 	}
 	void SetShaders(Shader* shader){
 		// glDeleteProgram(program);
-		program = glCreateProgram();
-		shader->AttachShader(program);
-		this->shader = shader;
-		glLinkProgram(program);
+		program = glCreateProgram(); std::cout << "Program Created!" << std::endl;
+		shader->AttachShader(program); std::cout << "Shader Attached!" << std::endl;
+		this->shader = shader; std::cout << "this->shader = shader;" << std::endl;
+		glLinkProgram(program); std::cout << "Shader Linked!" << std::endl;
 
 		PositionLocation = glGetUniformLocation(program, "position");
 

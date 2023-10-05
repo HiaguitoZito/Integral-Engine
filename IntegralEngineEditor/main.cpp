@@ -37,11 +37,13 @@ int main(int argc, char *argv[]) {
 	glViewport(0, 0, 800, 600);
 
 	Shader* s = new Shader("C:/Users/Hiago Fernando/Desktop/Coisas Importantes/IntegralEngine/IntegralEngineEditor/VertexShader.vert", "C:/Users/Hiago Fernando/Desktop/Coisas Importantes/IntegralEngine/IntegralEngineEditor/FragShader.frag");
-
+	std::cout << "Creating Object" << std::endl;
 	GameObject* obj = new GameObject();
+	std::cout << "Adding Component" << std::endl;
 	MeshRenderer* m = obj->AddComponent<MeshRenderer>();
+	std::cout << "Setting Shaders" << std::endl;
 	m->SetShaders(s);
-
+	std::cout << "Shaders setted" << std::endl;
 	std::cout << "Starting Update!" << std::endl;
 	while (!glfwWindowShouldClose(window)) {
 		glClearColor(0.2f, 0.3f, 0.4f, 1.0f);

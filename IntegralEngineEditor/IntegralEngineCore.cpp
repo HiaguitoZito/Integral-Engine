@@ -66,6 +66,7 @@ public:
 		}
 	}
 	int AttachShader(unsigned int program){
+		std::cout << program << std::endl;
 		glAttachShader(program, VertexBuffer);
 		glAttachShader(program, FragmentBuffer);
 	}
