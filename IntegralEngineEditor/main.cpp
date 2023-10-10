@@ -36,15 +36,18 @@ int main(int argc, char *argv[]) {
 
 	glViewport(0, 0, 800, 600);
 
-	Shader* s = new Shader("C:/Users/Hiago Fernando/Desktop/Coisas Importantes/IntegralEngine/IntegralEngineEditor/VertexShader.vert", "C:/Users/Hiago Fernando/Desktop/Coisas Importantes/IntegralEngine/IntegralEngineEditor/FragShader.frag");
-	std::cout << "Creating Object" << std::endl;
+	Shader* s = new Shader("C:/Users/Hiago Fernando/Desktop/Coisas Importantes/IntegralEngine/IntegralEngineEditor/shaders/VertexShader.vert", "C:/Users/Hiago Fernando/Desktop/Coisas Importantes/IntegralEngine/IntegralEngineEditor/shaders/FragShader.frag");
 	GameObject* obj = new GameObject();
-	std::cout << "Adding Component" << std::endl;
 	MeshRenderer* m = obj->AddComponent<MeshRenderer>();
-	std::cout << "Setting Shaders" << std::endl;
+
+	GameObject* obj2 = new GameObject();
+	MeshRenderer* m2 = obj2->AddComponent<MeshRenderer>();
+
 	m->SetShaders(s);
-	std::cout << "Shaders setted" << std::endl;
-	std::cout << "Starting Update!" << std::endl;
+	m2->SetShaders(s);
+
+	obj2->transform->position = Vector3(0.5f, 0.5f, 0.0f);
+
 	while (!glfwWindowShouldClose(window)) {
 		glClearColor(0.2f, 0.3f, 0.4f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
@@ -52,6 +55,10 @@ int main(int argc, char *argv[]) {
 		for(MonoBehaviour* c : obj->components){
 			c->callUpdate();
 		}
+		for(MonoBehaviour* c : obj2->components){
+			c->callUpdate();
+		}
+
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}

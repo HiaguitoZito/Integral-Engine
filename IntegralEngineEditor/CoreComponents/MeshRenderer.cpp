@@ -37,10 +37,6 @@ class MeshRenderer : public MonoBehaviour {
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 		glBindVertexArray(0);
-		std::cout << "VertexArray Bound!" << std::endl;
-		std::cout << "VAO: " << VAO << std::endl;
-		std::cout << "vs: " << mesh->vSize / sizeof(float) << std::endl;
-		std::cout << "is: " << mesh->uSize / sizeof(unsigned int) << std::endl;
 	}
 	void Update() {
 		glUseProgram(program);
@@ -64,11 +60,11 @@ public:
 		Start();
 	}
 	void SetShaders(Shader* shader){
-		// glDeleteProgram(program);
-		program = glCreateProgram(); std::cout << "Program Created!" << std::endl;
-		shader->AttachShader(program); std::cout << "Shader Attached!" << std::endl;
-		this->shader = shader; std::cout << "this->shader = shader;" << std::endl;
-		glLinkProgram(program); std::cout << "Shader Linked!" << std::endl;
+		glDeleteProgram(program);
+		program = glCreateProgram();
+		shader->AttachShader(program);
+		this->shader = shader;
+		glLinkProgram(program);
 
 		PositionLocation = glGetUniformLocation(program, "position");
 
@@ -78,9 +74,6 @@ public:
 		if (!success) {
 			glGetProgramInfoLog(program, 512, NULL, infoLog);
 			std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
-		}else{
-			std::cout << "Program Linked!" << std::endl;
-			std::cout << "Program: " << program << std::endl;
 		}
 	}
 };

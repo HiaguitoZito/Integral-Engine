@@ -34,8 +34,6 @@ public:
 		if(!success){
 			glGetShaderInfoLog(VertexBuffer, 512, NULL, infoLog);
 			std::cout << "ERROR::COMPILE::SHADER\n" << infoLog << std::endl;
-		} else {
-			std::cout << "Shader Created!" << std::endl;
 		}
 
 		// Fragment Shader Compiler.
@@ -49,7 +47,6 @@ public:
 			}
 		}
 		shader2.close();
-		std::cout << data2 << std::endl;
 		const char* FragSource = data2.c_str();
 
 		FragmentBuffer = glCreateShader(GL_FRAGMENT_SHADER);
@@ -61,12 +58,9 @@ public:
 		if(!success2){
 			glGetShaderInfoLog(VertexBuffer, 512, NULL, infoLog2);
 			std::cout << "ERROR::COMPILE::SHADER\n" << infoLog2 << std::endl;
-		} else {
-			std::cout << "Shader Created!" << std::endl;
 		}
 	}
 	int AttachShader(unsigned int program){
-		std::cout << program << std::endl;
 		glAttachShader(program, VertexBuffer);
 		glAttachShader(program, FragmentBuffer);
 	}
